@@ -1,0 +1,56 @@
+# Ch1 Exercise 1.4
+# Macky Ruiz
+# CIS 007
+
+print("a    a^2     a*3")
+print("1    1       1")
+print("2    4       8")
+print("3    9       27")
+print("4    16      64")
+
+
+C:\Users\ruizm\Documents\git\school\cis007\venv\Scripts\python.exe C:/Users/ruizm/Documents/git/school/cis007/ch1/ex1.4.py
+a    a^2     a*3
+1    1       1
+2    4       8
+3    9       27
+4    16      64
+
+Process finished with exit code 0
+
+# Ch1 Exercise 1.9
+# Macky Ruiz
+# CIS 007
+# Print area
+# Formula: area = width x height
+# width = 4.5
+# height = 7.9
+
+print("area =", 4.5*7.9)
+
+
+C:\Users\ruizm\Documents\git\school\cis007\venv\Scripts\python.exe C:/Users/ruizm/Documents/git/school/cis007/ch1/ex1.9.py
+area = 35.550000000000004
+
+Process finished with exit code 0
+
+# Ch1 Exercise 1.15
+# Macky Ruiz
+# CIS 007
+
+import turtle
+
+turtle.color("black")
+turtle.right(-60)
+turtle.forward(200)
+turtle.left(120)
+turtle.forward(200)
+turtle.left(120)
+turtle.forward(400)
+turtle.right(120)
+turtle.forward(200)
+turtle.right(120)
+turtle.forward(200)
+
+turtle.done()
+
