@@ -14,11 +14,13 @@ total = subtotal + tip
 
 print("The gratuity is", tip, "and the total is", total)
 
+>>
 C:\Users\ruizm\Documents\git\school\cis007\venv\Scripts\python.exe C:/Users/ruizm/Documents/git/school/cis007/ch2/ex2.5.py
 Enter The subtotal and a gratuity rate: 15.69, 20
 The gratuity is  3.138 and the total is  18.828
 
 Process finished with exit code 0
+>>
 
 
 # Ch2 Exercise 2.13
@@ -44,6 +46,7 @@ print(d3)
 print(d2)
 print(d1)
 
+>>
 C:\Users\ruizm\Documents\git\school\cis007\venv\Scripts\python.exe C:/Users/ruizm/Documents/git/school/cis007/ch2/ex2.13.py
 Enter an integer: 3125
 5
@@ -52,3 +55,25 @@ Enter an integer: 3125
 3
 
 Process finished with exit code 0
+>>
+
+# Ch2 Exercise 2.15
+# Macky Ruiz
+# CIS 007
+#
+# This program prompts the user to enter the side of a hexagon and displays its area.
+import math
+#
+# Prompt user to enter a number
+number = eval(input("Enter the side: "))
+
+# Calculate and print
+print ("The area of the hexagon is",((3 * math.sqrt(3))) / 2 * number ** 2 )
+
+>>
+C:\Users\ruizm\Documents\git\school\cis007\venv\Scripts\python.exe C:/Users/ruizm/Documents/git/school/cis007/ch2/ex2.15.py
+Enter the side: 5.5
+The area of the hexagon is 78.59180539343781
+
+Process finished with exit code 0
+>>
