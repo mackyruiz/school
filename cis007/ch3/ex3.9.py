@@ -32,8 +32,8 @@ print("\n",
       "Hourly Rate: ${:,.2f}".format(rate), "\n",
       "Gross pay: ${:,.2f}".format(GrossPay), "\n",
       "Deductions: \n",
-      "\t", "Federal Withholding {:,.1%}".format(FedTax), "${:,.2f}".format(FedWithholding), "\n",
-      "\t", "State Withholding {:,.1%}".format(StateTax), "${:,.2f}".format(StateWithholding), "\n",
+      "\t", "Federal Withholding ({:,.1%}):".format(FedTax), "${:,.2f}".format(FedWithholding), "\n",
+      "\t", "State Withholding ({:,.1%}):".format(StateTax), "${:,.2f}".format(StateWithholding), "\n",
       "\t", "Total Deduction: ${:,.2f}".format(TaxDeductions), "\n",
       "Net Pay: ${:,.2f}".format(NetPay)
 )

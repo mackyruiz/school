@@ -62,8 +62,8 @@ print("\n",
       "Hourly Rate: ${:,.2f}".format(rate), "\n",
       "Gross pay: ${:,.2f}".format(GrossPay), "\n",
       "Deductions: \n",
-      "\t", "Federal Withholding {:,.1%}".format(FedTax), "${:,.2f}".format(FedWithholding), "\n",
-      "\t", "State Withholding {:,.1%}".format(StateTax), "${:,.2f}".format(StateWithholding), "\n",
+      "\t", "Federal Withholding ({:,.1%}):".format(FedTax), "${:,.2f}".format(FedWithholding), "\n",
+      "\t", "State Withholding ({:,.1%}):".format(StateTax), "${:,.2f}".format(StateWithholding), \n",
       "\t", "Total Deduction: ${:,.2f}".format(TaxDeductions), "\n",
       "Net Pay: ${:,.2f}".format(NetPay)
 )
@@ -76,14 +76,14 @@ Enter hourly pay rate: 9.75
 Enter federal tax withholding rate: 0.20
 Enter state tax withholding rate: 0.09
 
- Employee Name: Smith 
- Hours Worked: 10.0 
- Hourly Rate: $9.75 
- Gross pay: $97.50 
- Deductions: 
- 	 Federal Withholding 20.0% $19.50 
- 	 State Withholding 9.0% $8.78 
- 	 Total Deduction: $28.27 
+ Employee Name: Smith
+ Hours Worked: 10.0
+ Hourly Rate: $9.75
+ Gross pay: $97.50
+ Deductions:
+       Federal Withholding (20.0%): $19.50
+       State Withholding (9.0%): $8.78
+       Total Deduction: $28.27
  Net Pay: $69.22
 >>>
 
