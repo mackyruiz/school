@@ -1,4 +1,4 @@
-# Ch2 Exercise 3.6
+# Ch3 Exercise 3.6
 # Macky Ruiz
 # CIS 007
 
