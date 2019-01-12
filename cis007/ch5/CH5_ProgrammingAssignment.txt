@@ -1,0 +1,79 @@
+# Ch5 ex5.3
+# Macky Ruiz
+# CIS 007
+
+# Program converts kg to lbs
+# 1kg = 2.2 lbs
+conversion = 2.2
+
+print(format("Kilograms", "<15s"), format("Pounds", "<10s"))
+for i in range(1, 200):
+    print(format(i, "<15"), format(i * conversion, ">6.1f"))
+
+
+>>>
+maru@marups:/mnt/c/Users/ruizm/Documents/git/school/cis007/ch5$ python3 ex5.3.py
+Kilograms       Pounds
+1                  2.2
+2                  4.4
+3                  6.6
+4                  8.8
+5                 11.0
+..
+( 6..193 ommited )
+..
+194              426.8
+195              429.0
+196              431.2
+197              433.4
+198              435.6
+199              437.8
+>>>
+
+# Ch5 ex5.17
+# Macky Ruiz
+# CIS 007
+
+count = 1
+lineLength = 10                         # Create a new line after n characters
+
+while count < 96:
+    print(chr(32 + count), end = ' ')   # convert and print number to ASCII character w/one whitespace
+    if count % lineLength == 0:
+        print()                         # Creates new line
+    count += 1
+
+>>>
+maru@marups:/mnt/c/Users/ruizm/Documents/git/school/cis007/ch5$ python3 ex5.17.py
+! " # $ % & ' ( ) *
++ , - . / 0 1 2 3 4
+5 6 7 8 9 : ; < = >
+? @ A B C D E F G H
+I J K L M N O P Q R
+S T U V W X Y Z [ \
+] ^ _ ` a b c d e f
+g h i j k l m n o p
+q r s t u v w x y z
+{ | } ~
+>>>
+
+
+# Ch5 ex 5.29
+# Macky Ruiz
+# CIS 007
+
+count = 1
+lineLength = 40
+
+for count in range(2000, 2100):
+        if count % 4 == 0 and count % 100 != 0:
+            print(count, end=' ')
+        if count % lineLength == 0:
+            print()
+        count += 1
+>>>
+maru@marups:/mnt/c/Users/ruizm/Documents/git/school/cis007/ch5$ python3 ex5.29.py
+2004 2008 2012 2016 2020 2024 2028 2032 2036 2040
+2044 2048 2052 2056 2060 2064 2068 2072 2076 2080
+2084 2088 2092 2096
+>>>
