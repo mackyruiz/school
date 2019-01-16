@@ -1,0 +1,164 @@
+i# Ch5 ex 6.9
+# Macky Ruiz
+# CIS 007
+
+def footToMeter(foot):
+    mt = foot*0.305
+    return mt
+
+def meterToFoot(meter):
+    ft = meter / 0.305
+    return ft
+
+def main ():
+    print(format("Feet", "<15s"), format("Meters", "<15s"))
+    print("----------------------------")
+    for feet in range(1, 11):
+        meter = footToMeter(feet)
+        print(format(feet, "<15.1f"), format(meter, "<15.3f"))
+    print()
+    print(format("Meters", "<15s"), format("Feet", "<15s"))
+    print("----------------------------")
+    number = 15
+    while number < 65:
+        number += 5
+        feet2 = meterToFoot(number)
+        print(format(number, "<15.1f"), format(feet2, "<15.3f"))
+
+>>>
+maru@marups:~/git/school/cis007/ch6$ python3 ex6.9.py
+Feet            Meters
+----------------------------
+1.0             0.305
+2.0             0.610
+3.0             0.915
+4.0             1.220
+5.0             1.525
+6.0             1.830
+7.0             2.135
+8.0             2.440
+9.0             2.745
+10.0            3.050
+
+Meters          Feet
+----------------------------
+20.0            65.574
+25.0            81.967
+30.0            98.361
+35.0            114.754
+40.0            131.148
+45.0            147.541
+50.0            163.934
+55.0            180.328
+60.0            196.721
+65.0            213.115
+>>>
+
+
+# Ch5 ex 6.11
+# Macky Ruiz
+# CIS 007
+
+# comission rates:
+# $0.01 - $5000:      8%
+# $5000.01 - $10,000: 10%
+# $10,000.1 +:        12%
+
+
+def computeCommission(salesAmount):
+    if salesAmount >= 10000.01:
+        comm = 5000 * 0.08 + 5000 * 0.1 + (salesAmount - 10000) * 0.12
+    elif salesAmount >= 5000.01:
+        comm = 5000 * 0.08 + (salesAmount - 5000) * 0.10
+    else:
+        comm = salesAmount * 0.08
+
+    return comm
+
+def main():
+    print(format("salesAmount", "<15s"), format("Commission", "<15s"))
+    number = 5000
+    while number < 100000:
+        number += 5000
+        commission = computeCommission(number)
+        print(format(str(number), "<15s"), format(str(commission), "<15s"))
+main()
+
+>>>
+maru@marups:~/git/school/cis007/ch6$ python3 ex6.11.py
+salesAmount     Commission
+10000           900.0
+15000           1500.0
+20000           2100.0
+25000           2700.0
+30000           3300.0
+35000           3900.0
+40000           4500.0
+45000           5100.0
+50000           5700.0
+55000           6300.0
+60000           6900.0
+65000           7500.0
+70000           8100.0
+75000           8700.0
+80000           9300.0
+85000           9900.0
+90000           10500.0
+95000           11100.0
+100000          11700.0
+>>>
+
+
+
+# Ch5 ex 6.18
+# Macky Ruiz
+# CIS 007
+
+# Display matrix of 0s and 1s. Write a function that displays an n-by-n matrix. Prompt the user to enter n and displays
+# an n-by-n matrix. sample:
+# Enter n: 3
+# 0 1 0
+# 0 0 0
+# 1 1 1
+import random
+
+def printMatrix(number):
+    matrix = random.randint(0, 1)
+    return matrix
+
+def main():
+    n = eval(input("Enter n: "))
+    count = 0
+    while count < n:
+        print(printMatrix(n), printMatrix(n), printMatrix(n))
+        count +=1
+main()
+
+>>>
+maru@marups:~/git/school/cis007/ch6$ python3 ex6.18.py
+Enter n: 3
+0 0 0
+0 0 1
+1 1 0
+maru@marups:~/git/school/cis007/ch6$ python3 ex6.18.py
+Enter n: 4
+1 1 0
+0 1 1
+1 0 1
+1 1 1
+maru@marups:~/git/school/cis007/ch6$ python3 ex6.18.py
+Enter n: 1
+1 0 0
+maru@marups:~/git/school/cis007/ch6$ python3 ex6.18.py
+Enter n: 10
+1 1 0
+1 0 1
+0 0 0
+1 0 0
+1 1 1
+0 0 0
+0 0 0
+1 1 1
+1 1 0
+0 1 1
+>>>

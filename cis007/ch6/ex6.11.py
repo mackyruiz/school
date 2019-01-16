@@ -24,5 +24,5 @@ def main():
     while number < 100000:
         number += 5000
         commission = computeCommission(number)
-        print(number, commission)
+        print(format(str(number), "<15s"), format(str(commission), "<15s"))
 main()
