@@ -9,11 +9,15 @@
 # 0 0 0
 # 1 1 1
 import random
+
 def printMatrix(number):
-    number = 0
-    if number < 1:
-        matrix = random.randint(0, 1)
+    matrix = random.randint(0, 1)
+    return matrix
 
 def main():
     n = eval(input("Enter n: "))
-    printMatrix(n)
+    count = 0
+    while count < n:
+        print(printMatrix(n), printMatrix(n), printMatrix(n))
+        count +=1
+main()

@@ -7,13 +7,15 @@
 # $5000.01 - $10,000: 10%
 # $10,000.1 +:        12%
 
+
 def computeCommission(salesAmount):
-    if salesAmount < 5000.0:
-        comm = salesAmount * 0.08
-    elif salesAmount < 10000:
-        comm = salesAmount * 0.10
+    if salesAmount >= 10000.01:
+        comm = 5000 * 0.08 + 5000 * 0.1 + (salesAmount - 10000) * 0.12
+    elif salesAmount >= 5000.01:
+        comm = 5000 * 0.08 + (salesAmount - 5000) * 0.10
     else:
-        comm = salesAmount * 0.12
+        comm = salesAmount * 0.08
+
     return comm
 
 def main():
@@ -22,8 +24,5 @@ def main():
     while number < 100000:
         number += 5000
         commission = computeCommission(number)
-        extra5k = number - 5000
-        extra10 = number - 10000
-#        print(number, computeCommission(commission) + extra)
         print(number, commission)
 main()
