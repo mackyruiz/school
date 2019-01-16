@@ -48,7 +48,9 @@ class Account:
     def getMonthlyInterest(self):
         ammount = self.__balance * aInterestRate/12
         return amount
+
     def deposit(self, ammount):
         self.__balance += ammount
+
     def withdraw(self, ammount):
         self.__balance -= ammount
