@@ -1,4 +1,4 @@
-# Ch5 ex 7.3
+# Ch7 ex 7.3
 # main function
 # Macky Ruiz
 # CIS 007

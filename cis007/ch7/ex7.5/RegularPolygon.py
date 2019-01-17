@@ -1,4 +1,4 @@
-# Ch5 ex 7.5
+# Ch7 ex 7.5
 # RegularPolygon class
 # Macky Ruiz
 # CIS 007

@@ -1,0 +1,207 @@
+# Ch7 ex 7.3
+# account class
+# Macky Ruiz
+# CIS 007
+
+
+'''
+UML diagram:
+-----------------------------------------------------------------------------
+# Class name
+Account
+-----------------------------------------------------------------------------
+# Variable section
+accountID: int
+balance: float
+annualInterestRate: float
+-----------------------------------------------------------------------------
+# Constructor
+Account(accountID:int, balance:float, annualInterestRate:float)
+getAccountID():int                  # accessor method
+getBalance():float                  # accessor method
+getAnnualInterestRate():float       # accessor method
+setAccountID(accountID: int)        # mutator method
+setBalance(bal:float)               # mutator method
+setAnnualInterestRate(annualInterestRate:float)         # mutator method
+getMonthlyInterestRate():float
+getMonthlyInterest():float
+deposit(ammount: float)
+withdraw(ammount: float)
+-----------------------------------------------------------------------------
+
+'''
+
+class Account:
+    def __init__(self, accountID=0, balance=100, annualInterestRate=0):
+        self.__accountID=accountID
+        self.__balance=balance
+        self.__annualInterestRate=annualInterestRate
+
+    def getAccountID(self):
+        return self.__accountID
+
+    def setAccountID(self,accoundID):
+        self.__accoundID = accoundID
+
+    def getMonthlyInterestRate(self):
+        self.__annualInterestRate/12
+
+    def getMonthlyInterest(self):
+        ammount = self.__balance * self.__annualInterestRate/12
+        return ammount
+
+    def deposit(self, ammount):
+        self.__balance += ammount
+
+    def withdraw(self, ammount):
+        self.__balance -= ammount
+
+    def getBalance(self):
+        return self.__balance
+
+
+# Ch5 ex 7.3
+# main function
+# Macky Ruiz
+# CIS 007
+from Account import Account
+
+def main():
+    a1 = Account() #Creates an account with default values
+    acc = Account(1122, 20000, 0.045)
+    acc.withdraw(2500)
+    acc.deposit(3000)
+    print(acc.getAccountID(), acc.getBalance(), acc.getMonthlyInterestRate(), acc.getMonthlyInterest())
+
+main()'
+
+>>>
+maru@marups:~/ruizm/Documents/git/school/cis007/ch7/ex7.3$ python3 main.py
+1122 20500 None 76.875
+>>>
+
+
+
+# Ch7 ex 7.5
+# RegularPolygon class
+# Macky Ruiz
+# CIS 007
+
+
+'''
+UML diagram:
+-----------------------------------------------------------------------------
+# Class name
+RegularPolygon
+-----------------------------------------------------------------------------
+# Variable section
+n: int
+side: float
+x: float
+y: float
+-----------------------------------------------------------------------------
+# Constructor
+setN():int
+setSide():float
+setX():float
+setY():float
+getN():int
+getSide():float
+getX():float
+getY():float
+getPerimeter():float
+getArea():float
+-----------------------------------------------------------------------------
+'''
+
+import math
+
+class RegularPolygon:
+
+    def __init__(self, n=3, side=1, x=0, y=0):
+        self.__n = n
+        self.__side = side
+        self.__x = x
+        self.__y = y
+
+
+
+    def getN(self):
+        return self.__n
+
+    def setN(self, n):
+        self.__n = n
+
+    def getSide(self):
+        return self.__side
+
+    def setSide(self, side):
+        self.__side = side
+
+    def getX(self):
+        return self.__x
+
+    def setX(self, x):
+        self.__x = x
+
+    def getY(self):
+        return self.__y
+
+    def setY(self, y):
+        self.__y = y
+
+    def getPerimeter(self):
+        perimeter = self.__n + self.__side + self.__x + self.__y
+        return perimeter
+
+    def getArea(self):
+        area = (self.__n * (self.__side ** 2)) / (4 * math.tan(math.pi/self.__n))
+        return area
+
+# Ch5 ex 7.5
+# main function
+# Macky Ruiz
+# CIS 007
+
+from RegularPolygon import RegularPolygon
+
+def main():
+    polygon1 = RegularPolygon()
+    polygon2 = RegularPolygon(6, 4)
+    polygon3 = RegularPolygon(10, 4, 5.6, 7.8)
+    print("Polygon1's Perimeter is: ", format(polygon1.getPerimeter(), ".2f"), " and Area is ", format(polygon1.getArea(), ".2f"))
+    print("Polygon2's Perimeter is: ", format(polygon2.getPerimeter(), ".2f"), " and Area is ", format(polygon2.getArea(), ".2f"))
+    print("Polygon3's Perimeter is: ", format(polygon3.getPerimeter(), ".2f"), " and Area is ", format(polygon3.getArea(), ".2f"))
+
+main()
+
+>>>
+maru@marups:~/ruizm/Documents/git/school/cis007/ch7/ex7.5$ python3 main.py
+Polygon1's Perimeter is:  4.00  and Area is  0.43
+Polygon2's Perimeter is:  10.00  and Area is  41.57
+Polygon3's Perimeter is:  27.40  and Area is  123.11
+>>>
+
+# Ch8 ex 8.4
+# Macky Ruiz
+# CIS 007
+
+def count(word, char):
+    total = 0
+    for char in word:
+        if char == word:
+            total += 1
+    return total        #Your return is inside your for loop
+
+def main():
+    word = input("Enter a string: ")
+    char = input("Enter a character: ")
+    print(word.count(char))
+main()
+
+>>>
+maru@marups:~/ruizm/Documents/git/school/cis007/ch8$ python3 ex8.4.py
+Enter a string: hello
+Enter a character: l
+2
+>>>
